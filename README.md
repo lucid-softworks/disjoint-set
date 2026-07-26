@@ -5,7 +5,10 @@ A typed union-find data structure using path compression and union by rank.
 ```ts
 import { DisjointSet } from "@lucid-softworks/disjoint-set";
 
-const components = new DisjointSet(["a", "b"]);
+const components = new DisjointSet<string>();
+components.add("a");
+components.add("b");
+components.union("a", "b");
 ```
 
 Add values with `add`, connect them with `union`, query with `find` or
